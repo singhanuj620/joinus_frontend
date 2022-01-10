@@ -1,10 +1,10 @@
 .footer_container{
-    height:60vh;
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-left:4%;
+    flex-wrap: wrap;
 }
 
 .footer_topSection{
@@ -29,6 +29,7 @@
 
 .footer_hr{
     width: 90%;
+    color:white;
 }
 
 .footer_bottomSection{
@@ -40,7 +41,7 @@
 }
 
 .footer_user{
-    width: 33%;
+    width: 33vw;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -84,7 +85,7 @@
 }
 
 .footer_discover {
-    width: 33%;
+    width: 30vw;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -118,7 +119,7 @@
 }
 
 .footer_contact {
-    width: 33%;
+    width: 30vw;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -158,4 +159,5 @@
     color: white;
     margin-top:4%;
     font-style: italic;
+    margin-bottom: 2%;
 }
