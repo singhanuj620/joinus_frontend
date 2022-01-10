@@ -1,0 +1,161 @@
+.footer_container{
+    height:60vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left:4%;
+}
+
+.footer_topSection{
+    margin-top:2%;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+    color:white;
+}
+
+.footer_top_title{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color:white;
+}
+
+.footer_top_button{
+    margin-left: 3%;
+}
+
+.footer_hr{
+    width: 90%;
+}
+
+.footer_bottomSection{
+    margin-top: 2%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer_user{
+    width: 33%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.footer_user_title{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color:white;
+}
+
+.footer_user_actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 4%;
+    font-family: 'Nunito',
+    sans-serif;
+    font-size: 1rem;
+    color: grey
+}
+
+.footer_user_actions > div :hover{
+    color: white
+}
+
+.footer_user_actions > div {
+    margin-top: 5%;
+}
+
+.link{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link:hover{
+    color: inherit;
+}
+
+.footer_discover {
+    width: 33%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.footer_discover_title {
+    font-family: 'Montserrat',
+        sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color:white;
+}
+
+.footer_discover_actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 4%;
+    font-family: 'Nunito',
+        sans-serif;
+    font-size: 1rem;
+    color: grey
+}
+
+.footer_discover_actions>div :hover {
+    color: white
+}
+
+.footer_discover_actions>div {
+    margin-top: 5%;
+}
+
+.footer_contact {
+    width: 33%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.footer_contact_title {
+    font-family: 'Montserrat',
+        sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color:white;
+}
+
+.footer_contact_actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 4%;
+    font-family: 'Nunito',
+        sans-serif;
+    font-size: 1rem;
+    color: grey
+}
+
+.footer_contact_actions>div :hover {
+    color: white
+}
+
+.footer_contact_actions>div {
+    margin-top: 5%;
+}
+
+.footer_note{
+    font-family: 'Nunito',
+    sans-serif;
+    font-size: 1rem;
+    color: white;
+    margin-top:4%;
+    font-style: italic;
+}

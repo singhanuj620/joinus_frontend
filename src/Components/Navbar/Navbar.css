@@ -3,6 +3,10 @@
     align-items: center;
 }
 
+.nav-link:hover {
+    color: white !important;
+}
+
 .test_border{
     border: 1px solid red;
 }
