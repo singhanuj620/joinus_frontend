@@ -8,3 +8,7 @@
 
 ## SS
 ![team card](./ss/team.png)
+![navbar](./ss/navbar.png)
+![header](./ss/header.png)
+![howworks](./ss/howwork.png)
+![footer](./ss/footer.png)
