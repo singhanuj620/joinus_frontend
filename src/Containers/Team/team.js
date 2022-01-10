@@ -3,6 +3,7 @@ import './team.css'
 import teambg from './team-bg.svg'
 import TeamCard from '../../Components/TeamCard/teamCard'
 import face from "./dp/face.png"
+import anuj from "./dp/anuj.JPG"
 
 const team = () => {
 
@@ -17,7 +18,7 @@ const team = () => {
             name: 'Anuj Singh',
             email: 'anuj.singh18@infosys.com',
             role: 'Specialist Programmer',
-            dp: face
+            dp: anuj
         },
         {
             name: 'Prakhar Gupta',
@@ -34,12 +35,13 @@ const team = () => {
     ]
 
     return (
+
         <div className="team_container" style={{
             backgroundImage: `url(${teambg})`,
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
+            backgroundRepeat: 'repeat',
         }}>
-            <div className="team_maintitle">Meet the team 😎</div>
+            <div className="team_maintitle">Meet the team <span role="img" aria-label="information">😎</span></div>
             <div className="team_card_container">
                 {
                     teamMembers.map((member, index) => {
@@ -49,6 +51,7 @@ const team = () => {
                 }
             </div>
         </div>
+
     )
 }
 

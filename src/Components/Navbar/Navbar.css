@@ -1,0 +1,16 @@
+.navbar_loginbuttons {
+    display: flex;
+    align-items: center;
+}
+
+.test_border{
+    border: 1px solid red;
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar_loginbuttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
