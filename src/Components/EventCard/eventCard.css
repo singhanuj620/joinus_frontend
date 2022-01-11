@@ -1,0 +1,95 @@
+.eventcard_container{
+    border: 3px solid #FAEDC6;
+    width:22vw;
+    display: flex;
+    align-items:center;
+    justify-content:flex-start;
+    flex-direction: column;
+}
+
+.eventcard_img{
+    height:15rem;
+    width:15rem;
+    object-fit: contain;
+    padding: 5%;
+}
+
+.eventcard_venue{
+    display:flex;
+    justify-content:space-between;
+    padding: 3%;
+    width: 100%;
+    font-family: 'Nunito',
+    sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+.eventcard_title_div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.eventcard_title{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color:#3E8E7E;
+    width: 100%;
+    height: 15vh;
+    margin-bottom:3%;
+    background-color:#FAEDC6;
+    padding: 0% 3%;
+    text-align: justify;
+
+}
+
+.eventcard_pill {
+    width: 30%;
+    margin-bottom:3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FABB51;
+    border-radius:10px;
+    font-family: 'Nunito',
+    sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.eventcard_pill_div{
+    padding-left: 3%;
+}
+
+.eventcard_creator{
+    font-family: 'Nunito',
+    sans-serif;
+    font-style: italic;
+    font-size: 0.8rem;
+    width:100%;
+    padding-left: 3%;
+}
+
+.eventcard_extra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding:4%;
+}
+
+.eventcard_attendes{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eventcard_icon{
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 10%;
+}

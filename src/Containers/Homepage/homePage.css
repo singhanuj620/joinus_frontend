@@ -114,6 +114,35 @@
     padding: 0% 5%;
 }
 
+.homepage_event_cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0% 4%;
+    margin: 2% 0%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.homepage_events{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.homepage_events_text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0% 3%;
+    margin-top: 3%;
+    font-family: 'Montserrat',
+    sans-serif;
+    font-size: 3rem;
+    background-color: #FAEDC6;
+}
+
 @media only screen and (max-width: 1000px) {
     .header_img {
         height: 20rem;

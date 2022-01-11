@@ -5,9 +5,62 @@ import headerimg from './images/header.svg'
 import handsup from './images/handsUp.svg'
 import ticket from './images/ticket.svg'
 import joingroup from './images/joinGroup.svg'
+import nocover from './images/nocover.svg'
 import { Button } from 'react-bootstrap';
+import EventCard from "../../Components/EventCard/eventCard";
 
 const Homepage = () => {
+
+    const title = 'Event 1'
+    const type = 'Offline'
+    const date = 'Jan 10, 2022'
+    const time = '10:00 AM'
+    const creator = { id: 'abc123', name: 'Anuj Singh' }
+    const totalAttendes = 200
+    const price = '100'
+    const cover = nocover
+    const arr = [
+        {
+            title,
+            type,
+            date,
+            time,
+            creator,
+            totalAttendes,
+            price,
+            cover
+        },
+        {
+            title,
+            type,
+            date,
+            time,
+            creator,
+            totalAttendes,
+            price,
+            cover
+        },
+        {
+            title,
+            type,
+            date,
+            time,
+            creator,
+            totalAttendes,
+            price,
+            cover
+        },
+        {
+            title,
+            type,
+            date,
+            time,
+            creator,
+            totalAttendes,
+            price,
+            cover
+        }
+    ]
     return (
         <>
             <div className="homepage_container" style={{
@@ -20,7 +73,7 @@ const Homepage = () => {
                         <div className="homepage_header_title">Experience real connections on MillLo</div>
                         <div className="homepage_header_subtitle">Whatever you are looking to do this year, MillLo can help. People have turned to MillLo to meet people, make friends, find support, grow a business, and explore their interests. Thousands of events are happening , join the fun.</div>
                     </div>
-                    <div><img className="header_img" src={headerimg} alt="header image" /></div>
+                    <div><img className="header_img" src={headerimg} alt="header" /></div>
                 </div>
             </div>
             <div className="homepage_works_container">
@@ -43,7 +96,30 @@ const Homepage = () => {
                         <div className="homepage_work_card_desc">You do not have to be an expert to gather people together and explore shared interests.</div>
                     </div>
                 </div>
-                <Button variant="info"><a href="#" className="link"></a>Get Started</Button>
+                <Button variant="info"><a href="/" className="link">Get Started</a></Button>
+            </div>
+            <div className="homepage_events">
+                <div className="homepage_events_text">
+                    <div className="homepage_events_title">Trending Events</div>
+                    <div className="homepage_events_more"><Button variant="info"><a className="link" href="/">More</a></Button></div>
+                </div>
+                <div className="homepage_event_cards">
+                    {
+                        arr.map((item, index) => {
+                            return <EventCard
+                                key={index}
+                                title={item.title}
+                                type={item.type}
+                                date={item.date}
+                                time={item.time}
+                                creator={item.creator}
+                                totalAttendes={item.totalAttendes}
+                                price={item.price}
+                                cover={item.cover}
+                            />
+                        })
+                    }
+                </div>
             </div>
         </>
     )
