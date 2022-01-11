@@ -20,6 +20,7 @@ const NavbarComp = () => {
                             <Nav.Link href="/">Profile</Nav.Link>
                             <Nav.Link href="/">Create Event</Nav.Link>
                             <Nav.Link href="/team">Devs</Nav.Link>
+                            <Nav.Link href="/test">Test</Nav.Link>
                         </Nav>
                         <Nav>
                             <div className="navbar_loginbuttons">
