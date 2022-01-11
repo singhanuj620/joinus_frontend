@@ -226,4 +226,13 @@
     .homepage_works_container > Button {
         margin-top: 10%;
     }
+
+    .homepage_events_text {
+        font-size:1.5rem;
+        padding: 3%;
+    }
+
+    .homepage_event_cards {
+        padding: 0% 0%;
+    }
 }

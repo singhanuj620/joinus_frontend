@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './homePage.css';
 import homebg from './images/home-bg.svg'
 import headerimg from './images/header.svg'
@@ -8,59 +8,75 @@ import joingroup from './images/joinGroup.svg'
 import nocover from './images/nocover.svg'
 import { Button } from 'react-bootstrap';
 import EventCard from "../../Components/EventCard/eventCard";
+import axios from 'axios';
 
 const Homepage = () => {
+    const trendingEventUrl = 'http://localhost:5000/api/trending';
+    const [trendingEvent, setTrendingEvent] = useState([]);
+    useEffect(() => {
+        setTrendingEvent([
+            {
+                id,
+                title,
+                type,
+                date,
+                time,
+                creator,
+                totalAttendes,
+                price,
+                cover
+            },
+            {
+                title,
+                type,
+                date,
+                time,
+                creator,
+                totalAttendes,
+                price,
+                cover
+            },
+            {
+                title,
+                type,
+                date,
+                time,
+                creator,
+                totalAttendes,
+                price,
+                cover
+            },
+            {
+                title,
+                type,
+                date,
+                time,
+                creator,
+                totalAttendes,
+                price,
+                cover
+            }
+        ])
 
+        // (async () => {
+        //     try{
+        //         const res = await axios.get(trendingEventUrl);
+        //         setTrendingEvent(res.data.data);
+        //     }
+        //     catch(err) {
+        //         console.log(err);
+        //     }
+        // })()
+    }, []);
+    const id = 'abc123'
     const title = 'Event 1'
     const type = 'Offline'
     const date = 'Jan 10, 2022'
     const time = '10:00 AM'
     const creator = { id: 'abc123', name: 'Anuj Singh' }
     const totalAttendes = 200
-    const price = '100'
+    const price = 100
     const cover = nocover
-    const arr = [
-        {
-            title,
-            type,
-            date,
-            time,
-            creator,
-            totalAttendes,
-            price,
-            cover
-        },
-        {
-            title,
-            type,
-            date,
-            time,
-            creator,
-            totalAttendes,
-            price,
-            cover
-        },
-        {
-            title,
-            type,
-            date,
-            time,
-            creator,
-            totalAttendes,
-            price,
-            cover
-        },
-        {
-            title,
-            type,
-            date,
-            time,
-            creator,
-            totalAttendes,
-            price,
-            cover
-        }
-    ]
     return (
         <>
             <div className="homepage_container" style={{
@@ -105,9 +121,10 @@ const Homepage = () => {
                 </div>
                 <div className="homepage_event_cards">
                     {
-                        arr.map((item, index) => {
+                        trendingEvent.map((item, index) => {
                             return <EventCard
                                 key={index}
+                                id={item.id}
                                 title={item.title}
                                 type={item.type}
                                 date={item.date}

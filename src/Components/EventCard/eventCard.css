@@ -93,3 +93,33 @@
     height: 1.8rem;
     margin-right: 10%;
 }
+
+@media only screen and (max-width: 450px) {
+    
+    .eventcard_container {
+        width:45vw;
+        margin-top:5%;
+    }
+    
+    .eventcard_img {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .eventcard_extra {
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start;
+    }
+
+    .eventcard_icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 5%;
+    }
+
+    .eventcard_btn{
+        margin-top: 15%;
+    }
+
+}
