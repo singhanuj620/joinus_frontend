@@ -1,13 +1,17 @@
-import React from 'react'
-import axios from 'axios'
-import { Button } from 'react-bootstrap'
+import React, { useState } from "react";
+import axios from 'axios';
+import { Button } from 'react-bootstrap';
 
-const test = () => {
+const Test = () => {
+    const [name, setName] = useState('anuj')
 
     const handleClick = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/test')
-            console.log(res.data)
+            const res = await axios.post('http://localhost:5000/api/test', {
+                name: 'Ranjit'
+            })
+            console.log(res.data.data)
+            setName(res.data.data.name)
         }
         catch (err) {
             console.log(err)
@@ -16,10 +20,11 @@ const test = () => {
 
     return (
         <div>
-            test
+            test --
+            {name}
             <Button onClick={handleClick}>click</Button>
         </div>
     )
 }
 
-export default test
+export default Test

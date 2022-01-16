@@ -8,6 +8,10 @@ const Footer = () => {
                 <div className="footer_top_title">Create Group</div>
                 <div className="footer_top_button"><Button variant="outline-info">Get Started</Button></div>
             </div>
+            <div className="footer_topSection">
+                <div className="footer_top_title">Join Group</div>
+                <div className="footer_top_button"><Button variant="outline-info">Explore</Button></div>
+            </div>
             <hr className="footer_hr"></hr>
             <div className="footer_bottomSection">
                 <div className="footer_user">
