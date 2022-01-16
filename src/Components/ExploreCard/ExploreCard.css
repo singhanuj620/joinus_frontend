@@ -1,0 +1,166 @@
+.explorecard_container {
+    border: 3px solid #FAEDC6;
+    width: 90vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.explorecard_container:hover {
+    border: 3px solid #3E8E7E;
+}
+
+.explorecard_img_div {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.explorecard_more_details {
+    width: 75%;
+}
+
+.explorecard_img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    padding: 5%;
+}
+
+.explorecard_venue {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 2%;
+    width: 100%;
+    font-family: 'Nunito',
+        sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.explorecard_title_div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.explorecard_title {
+    font-family: 'Montserrat',
+        sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #3E8E7E;
+    width: 100%;
+    height: 12vh;
+    margin-bottom: 1%;
+    background-color: #FAEDC6;
+    padding: 0% 2%;
+    text-align: justify;
+
+}
+
+.explorecard_pill {
+    width: 10%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FABB51;
+    border-radius: 10px;
+    font-family: 'Nunito',
+        sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.explorecard_pill_div {
+    padding-left: 2%;
+}
+
+.explorecard_creator {
+    font-family: 'Nunito',
+        sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+    width: 100%;
+    padding-left: 2%;
+}
+
+.explorecard_extra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2%;
+}
+
+.explorecard_hr {
+    width: 90%;
+    color: black;
+}
+
+.explorecard_attendes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.explorecard_icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 10%;
+}
+
+@media only screen and (max-width: 450px) {
+
+    .explorecard_container {
+        width: 95vw;
+        height: 53vh;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .explorecard_img_div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .explorecard_pill {
+        width: 30%;
+    }
+
+    .explorecard_more_details {
+        width: 100%;
+    }
+
+    .explorecard_img {
+        height: 12rem;
+        width: 100%;
+    }
+
+    .explorecard_title{
+        font-size:1.5rem;
+    }
+
+    .explorecard_extra {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .explorecard_icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 5%;
+    }
+
+}

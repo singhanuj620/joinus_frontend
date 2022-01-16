@@ -25,7 +25,7 @@ const eventCard = ({ id, title, type, date, time, creator, totalAttendes, price,
                 <div className="eventcard_attendes"><IconContext.Provider value={{ className: "eventcard_icon" }}>
                     <BiRupee />
                 </IconContext.Provider>{price}</div>
-                <div><Button className="eventcard_btn" variant="info"><a className="link" href={`/${id}`}>Details</a></Button></div>
+                <div><Button className="eventcard_btn" variant="info"><a className="link" href={`/event/${id}`}>Details</a></Button></div>
             </div>
         </div>
     )

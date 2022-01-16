@@ -46,7 +46,7 @@ const Login = () => {
                     draggable: false,
                     progress: undefined,
                 });
-                setTimeout(() => { window.location.href = "/"; }, 3000);
+                // setTimeout(() => { window.location.href = "/explore"; }, 3000);
                 // window.location.href = "/";
             } else {
                 toast.error('Login Failed', {
@@ -79,7 +79,7 @@ const Login = () => {
             backgroundSize: 'cover',
             backgroundRepeat: 'repeat',
         }}>
-            {isUserPresent ? <Navigate to="/" /> : <></>}
+            {isUserPresent ? <Navigate to="/explore" /> : <></>}
             <ToastContainer
                 position="top-right"
                 autoClose={3000}

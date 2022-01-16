@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import storeImport from "./store"
 import { PersistGate } from 'redux-persist/integration/react'
 import Homepage from "./Containers/Homepage/homePage";
+import Explore from "./Containers/Explore/Explore";
 import Test from "./Containers/Homepage/test";
 import Team from "./Containers/Team/team";
 import Login from "./Containers/Login/Login";
@@ -20,6 +21,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Homepage />} />
+            <Route path="/explore" element={<Explore />} />
             <Route path="/team" element={<Team />} />
             <Route path="/test" element={<Test />} />
             <Route path="/login" element={<Login />} />

@@ -1,0 +1,27 @@
+.explore_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+.explore_filter {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #7CD1B8;
+    font-family: 'Montserrat',
+        sans-serif;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .explore_filter {
+        height: 15vh;
+        
+    }
+}
