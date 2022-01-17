@@ -20,6 +20,15 @@ const Login = () => {
     useEffect(() => {
         if (cookies.user && cookies.user.token) {
             setIsUserPresent(true);
+            toast.success('Login successfull', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+            });
         }
     }, [])
 

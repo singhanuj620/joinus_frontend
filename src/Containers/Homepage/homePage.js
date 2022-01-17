@@ -27,6 +27,7 @@ const Homepage = () => {
                 cover
             },
             {
+                id,
                 title,
                 type,
                 date,
@@ -37,6 +38,7 @@ const Homepage = () => {
                 cover
             },
             {
+                id,
                 title,
                 type,
                 date,
@@ -47,6 +49,7 @@ const Homepage = () => {
                 cover
             },
             {
+                id,
                 title,
                 type,
                 date,

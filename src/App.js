@@ -7,6 +7,7 @@ import Homepage from "./Containers/Homepage/homePage";
 import Explore from "./Containers/Explore/Explore";
 import Test from "./Containers/Homepage/test";
 import Team from "./Containers/Team/team";
+import EventPage from "./Containers/EventPage/EventPage";
 import Login from "./Containers/Login/Login";
 import Signup from "./Containers/Signup/Signup";
 import Navbar from './Components/Navbar/Navbar';
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/test" element={<Test />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/event/:eventId" element={<EventPage />} />
           </Routes>
           <Footer />
         </>

@@ -8,6 +8,10 @@ const Explore = () => {
 
     const trendingEventUrl = 'http://localhost:5000/api/trending';
     const [trendingEvent, setTrendingEvent] = useState([]);
+    const [eventDay, setEventDay] = useState("all");
+    const [eventMode, setEventMode] = useState("all");
+    const [eventCategory, setEventCategory] = useState("all");
+
     useEffect(() => {
         setTrendingEvent([
             {
@@ -55,7 +59,11 @@ const Explore = () => {
 
         // (async () => {
         //     try{
-        //         const {data} = await axios.get(trendingEventUrl);
+        //         const {data} = await axios.post(trendingEventUrl,{
+        //             eventDay,
+        //             eventMode,
+        //             eventCategory
+        //          });
         //         setTrendingEvent(data.data);
         //     }
         //     catch(err) {
@@ -63,7 +71,9 @@ const Explore = () => {
         //         window.location.href = "/"
         //     }
         // })()
-    }, []);
+    }, [eventDay, eventMode, eventCategory]);
+
+    useEffect(() => { }, [])
 
     const id = 'abc123'
     const title = 'Event 1'
@@ -83,32 +93,33 @@ const Explore = () => {
                         <Col>
                             <Form.Group className="mb-3" controlId="formBasicDay">
                                 <Form.Label>Day</Form.Label>
-                                <Form.Select aria-label="Default select example">
-                                    <option value="0">Any Day</option>
-                                    <option value="1">Tomorrow</option>
-                                    <option value="2">This Week</option>
-                                    <option value="3">This Weekend</option>
-                                    <option value="4">This Month</option>
+                                <Form.Select aria-label="Default select example" onChange={(e) => setEventDay(e.target.value)}>
+                                    <option value="all">Any Day</option>
+                                    <option value="tomorrow">Tomorrow</option>
+                                    <option value="week">This Week</option>
+                                    <option value="weekend">This Weekend</option>
+                                    <option value="month">This Month</option>
                                 </Form.Select>
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group className="mb-3" controlId="formBasicEventMode">
                                 <Form.Label>Event Mode</Form.Label>
-                                <Form.Select aria-label="Default select example">
-                                    <option value="1">Offline</option>
-                                    <option value="2">Online</option>
+                                <Form.Select aria-label="Default select example" onChange={(e) => setEventMode(e.target.value)}>
+                                    <option value="all">Any</option>
+                                    <option value="offline">Offline</option>
+                                    <option value="online">Online</option>
                                 </Form.Select>
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group className="mb-3" controlId="formBasicCategory">
                                 <Form.Label>Category</Form.Label>
-                                <Form.Select aria-label="Default select example">
-                                    <option value="0">Open filter</option>
-                                    <option value="1">Software</option>
-                                    <option value="2">Art</option>
-                                    <option value="3">Yoga</option>
+                                <Form.Select aria-label="Default select example" onChange={(e) => setEventCategory(e.target.value)}>
+                                    <option value="all">Any</option>
+                                    <option value="software">Software</option>
+                                    <option value="art">Art</option>
+                                    <option value="yoga">Yoga</option>
                                 </Form.Select>
                             </Form.Group>
                         </Col>
