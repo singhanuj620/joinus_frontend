@@ -1,89 +1,88 @@
 import React, { useEffect, useState } from 'react'
 import './Explore.css'
 import ExploreCard from '../../Components/ExploreCard/ExploreCard'
-import nocover from './nocover.svg'
+import cover from './nocover.svg'
 import { Form, Row, Col } from 'react-bootstrap'
+import axios from 'axios'
 
 const Explore = () => {
 
-    const trendingEventUrl = 'http://localhost:5000/api/trending';
+    const trendingEventUrl = 'http://localhost:5000/events/event';
     const [trendingEvent, setTrendingEvent] = useState([]);
-    const [eventDay, setEventDay] = useState("all");
-    const [eventMode, setEventMode] = useState("all");
-    const [eventCategory, setEventCategory] = useState("all");
+    const [eventDay, setEventDay] = useState("Any");
+    const [eventMode, setEventMode] = useState("Any");
+    const [eventCategory, setEventCategory] = useState("Any");
 
     useEffect(() => {
-        setTrendingEvent([
-            {
-                id,
-                title,
-                type,
-                date,
-                time,
-                creator,
-                totalAttendes,
-                price,
-                cover
-            },
-            {
-                title,
-                type,
-                date,
-                time,
-                creator,
-                totalAttendes,
-                price,
-                cover
-            },
-            {
-                title,
-                type,
-                date,
-                time,
-                creator,
-                totalAttendes,
-                price,
-                cover
-            },
-            {
-                title,
-                type,
-                date,
-                time,
-                creator,
-                totalAttendes,
-                price,
-                cover
-            }
-        ])
+        // setTrendingEvent([
+        //     {
+        //         id,
+        //         eventName,
+        //         mode,
+        //         date,
+        //         time,
+        //         hostedBy,
+        //         totalAttendes,
+        //         price
+        //     },
+        //     {
+        //         id,
+        //         eventName,
+        //         mode,
+        //         date,
+        //         time,
+        //         hostedBy,
+        //         totalAttendes,
+        //         price
+        //     },
+        //     {
+        //         id,
+        //         eventName,
+        //         mode,
+        //         date,
+        //         time,
+        //         hostedBy,
+        //         totalAttendes,
+        //         price
+        //     },
+        //     {
+        //         id,
+        //         eventName,
+        //         mode,
+        //         date,
+        //         time,
+        //         hostedBy,
+        //         totalAttendes,
+        //         price
+        //     },
+        // ])
 
-        // (async () => {
-        //     try{
-        //         const {data} = await axios.post(trendingEventUrl,{
-        //             eventDay,
-        //             eventMode,
-        //             eventCategory
-        //          });
-        //         setTrendingEvent(data.data);
-        //     }
-        //     catch(err) {
-        //         console.log(err);
-        //         window.location.href = "/"
-        //     }
-        // })()
+        (async () => {
+            try {
+                const { data } = await axios.post(trendingEventUrl, {
+                    eventDay,
+                    eventMode,
+                    eventCategory
+                });
+                setTrendingEvent(data.data);
+            }
+            catch (err) {
+                console.log(err);
+                window.location.href = "/"
+            }
+        })()
     }, [eventDay, eventMode, eventCategory]);
 
     useEffect(() => { }, [])
 
-    const id = 'abc123'
-    const title = 'Event 1'
-    const type = 'Offline'
-    const date = 'Jan 10, 2022'
-    const time = '10:00 AM'
-    const creator = { id: 'abc123', name: 'Anuj Singh' }
-    const totalAttendes = 200
-    const price = 100
-    const cover = nocover
+    // const id = 'abc123'
+    // const eventName = 'Event 1'
+    // const mode = 'Offline'
+    // const date = 'Jan 10, 2022'
+    // const time = '10:00 AM'
+    // const hostedBy = { id: 'abc123', firstName: 'John', lastName: 'Anuj Singh' }
+    // const totalAttendes = 200
+    // const price = 100
 
     return (
         <div className="explore_container">
@@ -97,7 +96,6 @@ const Explore = () => {
                                     <option value="all">Any Day</option>
                                     <option value="tomorrow">Tomorrow</option>
                                     <option value="week">This Week</option>
-                                    <option value="weekend">This Weekend</option>
                                     <option value="month">This Month</option>
                                 </Form.Select>
                             </Form.Group>
@@ -132,14 +130,14 @@ const Explore = () => {
                         return <ExploreCard
                             key={index}
                             id={item.id}
-                            title={item.title}
-                            type={item.type}
+                            eventName={item.eventName}
+                            mode={item.mode}
                             date={item.date}
                             time={item.time}
-                            creator={item.creator}
+                            hostedBy={item.hostedBy}
                             totalAttendes={item.totalAttendes}
                             price={item.price}
-                            cover={item.cover}
+                            cover={cover}
                         />
                     })
                 }

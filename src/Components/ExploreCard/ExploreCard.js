@@ -5,22 +5,22 @@ import { IoIosPeople } from 'react-icons/io'
 import { IconContext } from "react-icons";
 import { BiRupee } from "react-icons/bi";
 
-const ExploreCard = ({ id, title, type, date, time, creator, totalAttendes, price, cover }) => {
+const ExploreCard = ({ id, eventName, mode, date, time, hostedBy, totalAttendes, price, cover }) => {
     return (
         <>
             <hr className="explorecard_hr"></hr>
             <div className="explorecard_container" onClick={() => window.location.href = `/event/${id}`}>
-                <div className="explorecard_img_div"><img className="explorecard_img" src={cover} alt={title} /></div>
+                <div className="explorecard_img_div"><img className="explorecard_img" src={cover} alt={eventName} /></div>
                 <div className="explorecard_more_details">
                     <div className="explorecard_venue">
-                        <div>{time}</div>
+                        <div>{time} IST</div>
                         <div>{date}</div>
                     </div>
                     <div className="explorecard_title_div">
-                        <div className="explorecard_pill_div"><div className="explorecard_pill">{type}</div></div>
-                        <div className="explorecard_title">{title}</div>
+                        <div className="explorecard_pill_div"><div className="explorecard_pill">{mode}</div></div>
+                        <div className="explorecard_title">{eventName}</div>
                     </div>
-                    <div className="explorecard_creator">Hosted by : {creator.name}</div>
+                    <div className="explorecard_creator">Hosted by : {hostedBy?.firstName} {hostedBy?.lastName}</div>
                     <div className="explorecard_extra">
                         <div className="explorecard_attendes"><IconContext.Provider value={{ className: "explorecard_icon" }}>
                             <IoIosPeople />

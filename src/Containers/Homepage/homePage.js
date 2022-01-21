@@ -5,81 +5,76 @@ import headerimg from './images/header.svg'
 import handsup from './images/handsUp.svg'
 import ticket from './images/ticket.svg'
 import joingroup from './images/joinGroup.svg'
-import nocover from './images/nocover.svg'
 import { Button } from 'react-bootstrap';
 import EventCard from "../../Components/EventCard/eventCard";
 import axios from 'axios';
 
 const Homepage = () => {
-    const trendingEventUrl = 'http://localhost:5000/api/trending';
+    const trendingEventUrl = 'http://localhost:5000/events/event';
     const [trendingEvent, setTrendingEvent] = useState([]);
     useEffect(() => {
-        setTrendingEvent([
-            {
-                id,
-                title,
-                type,
-                date,
-                time,
-                creator,
-                totalAttendes,
-                price,
-                cover
-            },
-            {
-                id,
-                title,
-                type,
-                date,
-                time,
-                creator,
-                totalAttendes,
-                price,
-                cover
-            },
-            {
-                id,
-                title,
-                type,
-                date,
-                time,
-                creator,
-                totalAttendes,
-                price,
-                cover
-            },
-            {
-                id,
-                title,
-                type,
-                date,
-                time,
-                creator,
-                totalAttendes,
-                price,
-                cover
-            }
-        ])
+        // setTrendingEvent([
+        //     {
+        //         id,
+        //         eventName,
+        //         mode,
+        //         date,
+        //         time,
+        //         hostedBy,
+        //         totalAttendes,
+        //         price
+        //     },
+        //     {
+        //         id,
+        //         eventName,
+        //         mode,
+        //         date,
+        //         time,
+        //         hostedBy,
+        //         totalAttendes,
+        //         price
+        //     },
+        //     {
+        //         id,
+        //         eventName,
+        //         mode,
+        //         date,
+        //         time,
+        //         hostedBy,
+        //         totalAttendes,
+        //         price
+        //     },
+        //     {
+        //         id,
+        //         eventName,
+        //         mode,
+        //         date,
+        //         time,
+        //         hostedBy,
+        //         totalAttendes,
+        //         price
+        //     }
+        // ])
 
-        // (async () => {
-        //     try{
-        //         const res = await axios.get(trendingEventUrl);
-        //         setTrendingEvent(res.data.data);
-        //     }
-        //     catch(err) {
-        //         console.log(err);
-        //     }
-        // })()
+        (async () => {
+            try {
+                const { data } = await axios.get(trendingEventUrl);
+                let allEvent = data.data
+                setTrendingEvent(allEvent.splice(0, 4));
+            }
+            catch (err) {
+                console.log(err);
+            }
+        })()
     }, []);
-    const id = 'abc123'
-    const title = 'Event 1'
-    const type = 'Offline'
-    const date = 'Jan 10, 2022'
-    const time = '10:00 AM'
-    const creator = { id: 'abc123', name: 'Anuj Singh' }
-    const totalAttendes = 200
-    const price = 100
-    const cover = nocover
+    // const id = 'abc123'
+    // const eventName = 'Event 1'
+    // const mode = 'Offline'
+    // const date = 'Jan 10, 2022'
+    // const time = '10:00'
+    // const hostedBy = { id: 'abc123', firstName: 'Anuj', lastName: 'Singh' }
+    // const totalAttendes = 200
+    // const price = 100
     return (
         <>
             <div className="homepage_container" style={{
@@ -128,14 +123,13 @@ const Homepage = () => {
                             return <EventCard
                                 key={index}
                                 id={item.id}
-                                title={item.title}
-                                type={item.type}
+                                eventName={item.eventName}
+                                mode={item.mode}
                                 date={item.date}
                                 time={item.time}
-                                creator={item.creator}
+                                hostedBy={item.hostedBy}
                                 totalAttendes={item.totalAttendes}
                                 price={item.price}
-                                cover={item.cover}
                             />
                         })
                     }
